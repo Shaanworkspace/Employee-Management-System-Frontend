@@ -9,41 +9,41 @@ const CreateTask = () => {
 
     const [newTask,setNewTask] = useState({});
 
-    const submitHandeller = (e) => {
-        e.preventDefault();
+    // // const submitHandeller = (e) => {
+    // //     e.preventDefault();
     
-        // Create the new task object
-        const task = {
-            taskTitle,
-            taskDescription,
-            taskDate,
-            category,
-            active: false,
-            newTask: true,
-            failed: true,
-            completed: false
-        };
+    // //     // Create the new task object
+    // //     const task = {
+    // //         taskTitle,
+    // //         taskDescription,
+    // //         taskDate,
+    // //         category,
+    // //         active: false,
+    // //         newTask: true,
+    // //         failed: true,
+    // //         completed: false
+    // //     };
     
-        // Get employees from localStorage
-        const employees = JSON.parse(localStorage.getItem('employees')) || [];
+    // //     // Get employees from localStorage
+    // //     const employees = JSON.parse(localStorage.getItem('employees')) || [];
     
-        // Check if assignTo matches any employee
-        const updatedEmployees = employees.map(emp => {
-            if (emp.firstName === asignTo) {
-                return { ...emp, tasks: [...emp.tasks, task] }; // Create a new object (immutability)
-            }
-            return emp;
-        });
+    // //     // Check if assignTo matches any employee
+    // //     const updatedEmployees = employees.map(emp => {
+    // //         if (emp.firstName === asignTo) {
+    // //             return { ...emp, tasks: [...emp.tasks, task] }; // Create a new object (immutability)
+    // //         }
+    // //         return emp;
+    // //     });
     
-        // Save updated data back to localStorage
-        localStorage.setItem('employees', JSON.stringify(updatedEmployees));
+    //     // Save updated data back to localStorage
+    //     localStorage.setItem('employees', JSON.stringify(updatedEmployees));
     
-        console.log("Updated Employees:", updatedEmployees);
-    };
+    //     console.log("Updated Employees:", updatedEmployees);
+    // };
 
     return (
         <div className='text-white h-full flex flex-col justify-between items-center'>
-            <form className='flex gap-26 justify-between' onSubmit={(e) => { submitHandeller(e) }}>
+            <form className='flex gap-26 justify-between'>
                 <div>
                     <div className='ml-1 flex'>
                         <div className='h-10  w-10 rounded-full border-1 text-xl border-solid border-pink flex items-center justify-center'>

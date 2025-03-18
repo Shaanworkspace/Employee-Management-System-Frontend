@@ -3,7 +3,7 @@ import React from 'react'
 const CompleteTask = ({data}) => {
   return (
     <div>
-        <div  className='text-white mb-2 h-92 w-[300px] p-5  bg-red-800 rounded-xl flex-shrink-0'>
+        {/* <div  className='text-white mb-2 h-92 w-[300px] p-5  bg-red-800 rounded-xl flex-shrink-0'>
             <div className='flex justify-between text-md items-center'>
                 <h3 className='bg-blue-600 px-3 py-1'>{data.category}</h3>
                 <h4 className='text-sm'>{data.taskDate}</h4>
@@ -13,7 +13,7 @@ const CompleteTask = ({data}) => {
                 <div className='flex justify-between  mt-4 gap-2.5'>
                 <button className='bg-green-600 py-1 px-2 text-sm'>Completed</button>
                 </div>
-            </div>
+            </div> */}
     </div>
   )
 }

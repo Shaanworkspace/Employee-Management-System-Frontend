@@ -4,10 +4,10 @@ import CompleteTask from './CompleteTask.jsx'
 import Failedtask from './Failedtask.jsx'
 import NewTask from './NewTask.jsx'
 
-function TaskList({data}) {
+function TaskList() {
     return (
         <div id='Tasklist' className='flex-nowrap overflow-x-auto h-94 w-[95%] mt-4 flex justify-start items-center gap-5 '>
-            {data.tasks.map((element,id)=>{
+            {/* {data.tasks.map((element,id)=>{
                 console.log(element)
                 if(element.active){
                     return <AcceptTask key={id} data={element}/>
@@ -21,7 +21,7 @@ function TaskList({data}) {
                 if(element.newTask){
                     return <NewTask key={id } data={element}/>
                 }
-            })}
+            })} */}
         </div>
     )
 }

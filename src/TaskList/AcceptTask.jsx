@@ -3,7 +3,7 @@ import React from 'react'
 const AcceptTask = ({data}) => {
   return (
     <div>
-        <div  className=' text-white mb-2 h-92 w-[300px] p-5  bg-pink-400 rounded-xl flex-shrink-0 '>
+        {/* <div  className=' text-white mb-2 h-92 w-[300px] p-5  bg-pink-400 rounded-xl flex-shrink-0 '>
             <div className='flex justify-between text-md items-center'>
                 <h3 className='bg-red-600 px-3 py-1'>{data.category}</h3>
                 <h4 className='text-sm'>{data.taskDate}</h4>
@@ -14,7 +14,7 @@ const AcceptTask = ({data}) => {
                 <button className='bg-green-600 py-1 px-2 text-sm'>Mark As Completed</button>
                 <button className='bg-red-600 py-1 px-2 text-sm'>Mark As Failed</button>
             </div>
-        </div>
+        </div> */}
     </div>
   )
 }

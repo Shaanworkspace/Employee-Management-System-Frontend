@@ -1,20 +1,22 @@
-import { useContext, useEffect, useState } from 'react'
+
+import { Route, Routes } from 'react-router'
 import './App.css'
 import Login from './components/Auth/Login.jsx'
-import EmployeeDashboard from './components/DashBoard/EmployeeDashboard.jsx'
+import Header from './components/others/Header.jsx'
 import AdminDashboard from './components/DashBoard/AdminDashboard.jsx'
-import { setLocalStorage ,getLocalStorage } from './utils/localStorage.jsx'
-import { AuthConstent } from './context/AuthProvider.jsx'
+import EmployeeDashboard from './components/DashBoard/EmployeeDashboard.jsx'
 
 
 function App() {
-	let [user,setUser] = useState(null);
-	const [loggedInUserData,setLoggedInUserData] = useState(null);
-	const Authdata = useContext(AuthConstent);	
 	return (
-    <>
-		{!user ? (<Login identifyUser={identifyUser} />) : user === "admin" ? (<AdminDashboard changeUser={setUser} data={loggedInUserData} />) : <EmployeeDashboard  changeUser={setUser}  data={loggedInUserData}/>}
-    </>
+		<>
+		<Routes>
+			<Route path='*' element={<Login/>}/>
+			<Route path='/login' element={<Login/>}/>
+			<Route path='/admin' element={<AdminDashboard/>}/>
+			<Route path='/employee' element={<EmployeeDashboard/>}/>
+		</Routes>
+		</>
 	)
 }
 
