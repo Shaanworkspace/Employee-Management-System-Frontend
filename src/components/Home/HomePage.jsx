@@ -1,10 +1,12 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 import { Link } from "react-router-dom"; 
 import heroImage from "../../assets/heroImage.jpg"
 
 const Home = () => {
     const navigate = useNavigate();
+    
 
+    
     return (
         <>
             {/* Header */}
