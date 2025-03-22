@@ -5,6 +5,7 @@ import Login from './components/Auth/Login.jsx'
 import Header from './components/others/Header.jsx'
 import AdminDashboard from './components/DashBoard/AdminDashboard.jsx'
 import EmployeeDashboard from './components/DashBoard/EmployeeDashboard.jsx'
+import TaskBox from './components/others/TaskBox.jsx'
 
 
 function App() {
