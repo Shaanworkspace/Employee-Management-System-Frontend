@@ -1,9 +1,15 @@
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom"; 
 import heroImage from "../../assets/heroImage.jpg";
+import { getAllEmployees } from "../../Api/apis";
+
 
 const Home = () => {
     const navigate = useNavigate();
+    const getEmployee = async()=>{
+        const getData = await getAllEmployees();
+        console.log(getData);
+    }
 
     return (
         <div className="overflow-x-hidden bg-[#EEEEEE]">
@@ -32,6 +38,12 @@ const Home = () => {
                         className="bg-[#EAD196] hover:bg-[#BF3131] text-[#7D0A0A] transition duration-300 font-semibold py-3 px-8 rounded-full text-lg shadow-lg"
                     >
                         Get Started
+                    </button>
+                    <button
+                        onClick={getEmployee}
+                        className="bg-[#EAD196] hover:bg-[#BF3131] text-[#7D0A0A] transition duration-300 font-semibold py-3 px-8 rounded-full text-lg shadow-lg"
+                    >
+                        Get All
                     </button>
                 </div>
                 <div className="md:w-1/2 flex justify-center">
