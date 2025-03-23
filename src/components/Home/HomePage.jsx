@@ -16,10 +16,10 @@ const Home = () => {
 
                 {/* Navigation Links */}
                 <div className="space-x-6">
-                    <Link to="/login?role=admin" className="hover:text-blue-400 transition duration-300">
+                    <Link to="/adminLogin?role=Admin" className="hover:text-blue-400 transition duration-300">
                         Admin Login
                     </Link>
-                    <Link to="/login?role=employee" className="hover:text-green-400 transition duration-300">
+                    <Link to="/employeeLogin?role=Employee" className="hover:text-green-400 transition duration-300">
                         Employee Login
                     </Link>
                 </div>
